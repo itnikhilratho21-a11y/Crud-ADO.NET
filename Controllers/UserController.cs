@@ -49,6 +49,7 @@ namespace Crud.Controllers
                 cmd.Parameters.AddWithValue("@c", u.CityName);
                 cmd.Parameters.AddWithValue("@s", u.StateName);
 
+
                 cmd.ExecuteNonQuery();
             }
 
