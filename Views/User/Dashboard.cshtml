@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+
+        .dashboard-box {
+            width: 400px;
+            margin: 120px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+            .dashboard-box h2 {
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+        .success-msg {
+            color: #28a745;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .logout-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #dc3545;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+            .logout-btn:hover {
+                background: #c82333;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard-box">
+        <h2>Dashboard</h2>
+
+        <div class="success-msg">
+            Login Successful!
+        </div>
+
+        <a href="/User/Logout" class="logout-btn">Logout</a>
+    </div>
+
+</body>
+</html>
+

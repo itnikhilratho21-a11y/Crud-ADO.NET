@@ -1,0 +1,101 @@
+﻿@model Crud.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f4f7;
+        }
+
+        .box {
+            width: 400px;
+            margin: 100px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+            .box h2 {
+                margin-bottom: 20px;
+            }
+
+            .box input {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+                .box input[type="submit"] {
+                    background: #28a745;
+                    color: white;
+                    border: none;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+        .success {
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+            .login-link a {
+                color: #007bff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .login-link a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Create Account</h2>
+
+        @if (ViewBag.Success != null)
+        {
+            <div class="success">@ViewBag.Success</div>
+        }
+
+        <form method="post">
+
+            <input type="text" name="Username" placeholder="Username" required />
+
+            <input type="email" name="Email" placeholder="Email" required />
+
+            <input type="password" name="Password" placeholder="Password" required />
+
+            <!--  CITY FIRST -->
+            <input type="text" name="CityName" placeholder="City Name" required />
+
+            <!--  STATE BELOW CITY -->
+            <input type="text" name="StateName" placeholder="State Name" required />
+
+            <input type="submit" value="Register" />
+        </form>
+
+        <!--  GO TO LOGIN OPTION -->
+        <div class="login-link">
+            Already have an account?
+            <a href="/User/Login">Go to Login</a>
+        </div>
+    </div>
+
+</body>
+</html>
